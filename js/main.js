@@ -1,4 +1,4 @@
-// 검색창 포커 시 input 넓이 가변
+// 검색창 포커 시 INPUT 넓이 가변
 const searchEl = document.querySelector('.search');
 const searchInputEl = searchEl.querySelector('input');
 
@@ -16,7 +16,7 @@ searchInputEl.addEventListener('blur', function(){
   searchInputEl.setAttribute('placeholder', '');
 });
 
-// 스크롤 시 badge(팝업 이미지) 사라짐
+// 스크롤 시 BADGE(팝업 이미지) 사라짐
 const badgeEl = document.querySelector('header .badges');
 
 window.addEventListener('scroll', _.throttle(function() {
@@ -36,3 +36,12 @@ window.addEventListener('scroll', _.throttle(function() {
     })
   }
 }, 300));
+
+// VISUAL 이미지 애니메이션
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index){
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1)*.7, // 0.7, 1.7, 2.1, 2.7 
+    opacity: 1
+  });
+});
