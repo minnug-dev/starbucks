@@ -20,6 +20,9 @@ a {
 
 /* HEADER */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
 }
@@ -172,4 +175,18 @@ header .main-menu .item .contents__texture h4 {
 header .main-menu .item .contents__texture p {
   color: #669900;
   margin: 4px 0 14px;
+}
+
+/* HEADER > BADGE */
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+header .badges .badge {
+  margin-bottom: 12px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  cursor: pointer;
 }
