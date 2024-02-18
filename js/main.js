@@ -132,3 +132,7 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
+
+// Footer - 현재 년도 정보 반영
+const thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
