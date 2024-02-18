@@ -292,3 +292,89 @@ header .badges .badge {
 .visual .fade-in {
   opacity: 0;
 }
+
+/* HEADER > NOTICE */
+.notice {
+
+}
+.notice .notice-line {
+  position: relative;
+}
+.notice .notice-line .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+}
+.notice .notice-line .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+.notice .notice-line .inner {
+  display: flex;
+  height: 62px;
+}
+.notice .notice-line .inner__left {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  background-color: #333;
+}
+.notice .notice-line .inner__left h2 {
+  margin-right: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+}
+.notice .notice-line .inner__left .swiper {
+  flex-grow: 1;
+  height: 62px;
+}
+.notice .notice-line .inner__left .swiper-slide {
+  display: flex;
+  align-items: center;
+  height: 62px;
+}
+.notice .notice-line .inner__left .swiper-slide a {
+  color: #fff;
+}
+.notice .notice-line .inner__left .notice-line__more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+}
+.notice .notice-line .inner__left .notice-line__more .material-icons {
+  font-size: 30px;
+  color: #fff;
+}
+.notice .notice-line .inner__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+.notice .notice-line .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.notice .notice-line .inner__right .toggle-promotion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+}
+.notice .notice-line .inner__right .toggle-promotion .material-icons {
+  font-size: 30px;
+}
