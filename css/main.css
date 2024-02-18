@@ -415,7 +415,6 @@ header .badges .badge {
   top: 40px;
   left: 50%;
   width: calc(819px * 3 + 20px);
-  height: 100%;
   margin-left: calc((819px * 3 + 20px) / -2);
 }
 .notice .promotion .swiper-slide {
@@ -428,13 +427,15 @@ header .badges .badge {
 }
 .notice .promotion .swiper-slide .btn {
   position: absolute;
-  bottom: 140px;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
 }
 .notice .promotion .swiper-pagination {
-  bottom: 80px;
+  left: 0;
+  right: 0;
+  bottom: 40px;
 }
 .notice .promotion .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
@@ -733,4 +734,49 @@ header .badges .badge {
 }
 .find-store .text-group .desc {
   margin-bottom: 20px;
+}
+
+/* AWARDS */
+.awards {
+  background-color: #272727;
+}
+.awards .inner {
+  padding: 40px 0;
+}
+.awards .swiper {
+  width: 100%;
+  height: 40px;
+}
+.awards .swiper-button-prev,
+.awards .swiper-button-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 42px;
+  height: 42px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: .3;
+  cursor: pointer;
+  outline: none;
+}
+.awards .swiper-button-prev {
+  left: -100px;
+}
+.awards .swiper-button-next {
+  right: -100px;
+}
+.awards .swiper-button-prev:hover,
+.awards .swiper-button-next:hover {
+  color: #333;
+  background-color: #fff;
+}
+.awards .swiper-button-prev::after,
+.awards .swiper-button-next::after {
+  content: "";
 }
