@@ -514,7 +514,6 @@ header .badges .badge {
   width: 1920px;
   margin-top: calc(1920px * 9 / 16 / -2);
   margin-left: calc(1920px / -2);
-  background-color: orangered;
 }
 .youtube .youtube__area::before {
   content: "";
