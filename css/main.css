@@ -60,12 +60,12 @@ a {
   color: #fff;
   background-color: #d9aa8a;
 }
-.btn.btn--whtie {
+.btn.btn--white {
   color: #fff;
   border-color: #fff;
 }
 
-.btn.btn--whtie:hover {
+.btn.btn--white:hover {
   color: #333;
   background-color: #fff;
 }
