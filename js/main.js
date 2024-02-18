@@ -47,8 +47,40 @@ fadeEls.forEach(function (fadeEl, index){
 });
 
 // Swiper Slide
-const swiper = new Swiper('.notice-line .swiper', {
+const swiperNoticeLine = new Swiper('.notice-line .swiper', {
   direction: 'vertical',
   autoplay: true,
   loop: true
+});
+const swiperPromotion = new Swiper('.promotion .swiper', {
+  slidesPerView: 3, 
+  spaceBetween: 10,
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  loop: true,
+  autoplay: {
+    delay: 5000
+  },
+  pagination: {
+    el: '.promotion .swiper-pagination', 
+    clickable: true 
+  },
+  navigation: {
+    prevEl: '.promotion .swiper-button-prev',
+    nextEl: '.promotion .swiper-button-next'
+  }
+});
+
+// PROMOTION 토글
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false; // 프로모션 영역이 안 숨겨져 있음
+promotionToggleBtn.addEventListener('click', function(){
+  isHidePromotion = !isHidePromotion
+  if (isHidePromotion) {
+    // 숨김 처리
+    promotionEl.classList.add('hide');
+  } else {
+    // 보임 처리
+    promotionEl.classList.remove('hide');
+  }
 });
