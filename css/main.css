@@ -399,6 +399,7 @@ header .badges .badge {
 }
 .notice .notice-line .inner__right .toggle-promotion .material-icons {
   font-size: 30px;
+  color: #444;
 }
 .notice .promotion {
   position: relative;
@@ -852,4 +853,22 @@ footer .copyright {
 }
 footer .logo {
   margin: 30px auto 0;
+}
+
+/* TOP BUTTON */
+#to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
 }

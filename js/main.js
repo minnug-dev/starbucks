@@ -19,6 +19,9 @@ searchInputEl.addEventListener('blur', function(){
 // 스크롤 시 .badges(팝업 이미지) 사라짐
 const badgeEl = document.querySelector('header .badges');
 
+// 버튼 클릭 시 최상단으로 이동
+const toTopEl = document.querySelector('#to-top');
+
 window.addEventListener('scroll', _.throttle(function() {
   console.log(window.scrollY > 500);
   if (window.scrollY) {
@@ -27,15 +30,30 @@ window.addEventListener('scroll', _.throttle(function() {
     gsap.to(badgeEl, .6, {
       opacity: 0,
       display: 'none'
-    })
+    });
+    // 최상단 이동 버튼 보이기
+    gsap.to(toTopEl, .2, {
+      x: 0
+    });
   }  else {
     // 배지 보이기
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
-    })
+    });
+    // 최상단 이동 버튼 숨기기
+    gsap.to(toTopEl, .2, {
+      x: 100
+    });
   }
 }, 300));
+
+// 버튼 클릭 시 최상단으로 이동
+toTopEl.addEventListener('click', function(){
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+})
 
 // .visual 이미지 애니메이션 (fade in)
 const fadeEls = document.querySelectorAll('.visual .fade-in');
