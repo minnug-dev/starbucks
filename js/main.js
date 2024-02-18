@@ -102,15 +102,18 @@ const swiperAwards = new Swiper('.awards .swiper', {
 // .promotion 토글
 const promotionEl = document.querySelector('.promotion');
 const promotionToggleBtn = document.querySelector('.toggle-promotion');
+const promotionToggleBtnIcon = promotionToggleBtn.querySelector('.material-icons')
 let isHidePromotion = false; // 프로모션 영역이 안 숨겨져 있음
 promotionToggleBtn.addEventListener('click', function(){
   isHidePromotion = !isHidePromotion
   if (isHidePromotion) {
     // 숨김 처리
     promotionEl.classList.add('hide');
+    promotionToggleBtnIcon.textContent = "keyboard_double_arrow_down";
   } else {
     // 보임 처리
     promotionEl.classList.remove('hide');
+    promotionToggleBtnIcon.textContent = "keyboard_double_arrow_up";
   }
 });
 
